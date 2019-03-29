@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+       function validateForm() {
+  var fname = document.forms["myForm"]["firstname"].value;
+  var lname = document.forms["myForm"]["lastname"].value;
+  var age = document.forms["myForm"]["age"].value;
+  var gender = document.forms["myForm"]["gender"].value;
+  var contact = document.forms["myForm"]["contact"].value;
+  var state = document.forms["myForm"]["state"].value;
+  var city = document.forms["myForm"]["city"].value;
+  var userid = document.forms["myForm"]["userid"].value;
+  var pass = document.forms["myForm"]["password"].value;
+  if (fname == "") {
+    alert("firstName must be filled out");
+    return false;
+  }
+  if (lname == "") {
+    alert("lastName must be filled out");
+    return false;
+  }
+  if (age == "" ) {
+    alert("age must be filled out");
+    return false;
+  }
+  if(isNaN(age) || age<1 )
+  {
+      alert("age must be number and can't be zero");
+      return false;
+      
+  }
+  if (gender == "") {
+    alert("gender must be filled out");
+    return false;
+  }
+  if (contact == "" ) {
+    alert("contact must be filled out");
+    return false;
+  }
+  if(isNaN(contact) )
+  {
+      alert("contact must be of length 10 ");
+      return false;
+  }
+  if (state == "") {
+    alert("state must be filled out");
+    return false;
+  }
+  if (city == "") {
+    alert("city must be filled out");
+    return false;
+  }
+  if (userid == "") {
+    alert("userid must be filled out");
+    return false;
+  }
+  if (pass== "") {
+    alert("password must be filled out");
+    return false;
+  }
+  
+}
+        </script>
+    
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/bank.jpg" alt="">
+                    <div class="signup-img-content">
+                        <h2 id="register-name">Register now </h2>
+                       
+                    </div>
+                </div>
+                <div class="signup-form">
+                        <h6 id="details-enter">Enter Your Details </h6>
+                    <form   class="register-form"  id="register-form"name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                   
+                                <div class="form-input">
+                                    <label for="first_name" class="required">First name</label>
+                                    <input type="text" name="firstname" id="firstname" Placeholder="Enter Your First Name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="last_name" class="required">Last name</label>
+                                    <input type="text" name="lastname" id="lastname" placeholder="Enter Your Last Name"/>
+                                </div>
+                                <div class="form-input">
+                                    <label for="age" class="required">Age</label>
+                                    <input type="text" name="age" id="age" Placeholder=" Enter Your Age"/>
+                                </div>
+                                <div class="form-input">
+                                        <div class="form-select">
+                                                <div class="label-flex">
+                                                    <label for="meal_preference">Gender</label>
+                                                </div>
+                                                <div class="select-list">
+                                                    <select name="gender" id="meal_preference">
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="phone_number" class="required">Contact number</label>
+                                    <input type="text" name="contact" id="contact" placeholder="Contact Number" />
+                                </div>
+                            </div>
+                            <div class="form-group">   
+                                
+                                    <div class="form-input">
+                                        <label for="city" class="required">City</label>
+                                        <input type="text" name="city" id="city" Placeholder=" City" />
+                                    </div>
+                            
+                                    <div class="form-input">
+                                        <label for="state" class="required">State</label>
+                                        <input type="text" name="state" id="state" Placeholder="State" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="userid" class="required">User ID</label>
+                                        <input type="text" name="userid" id="userid"  Placeholder="User Id" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="password" class="required">Password</label>
+                                        
+                                        
+                                        <input type="text" name="password" id="password" minlength="8" Placeholder="Password" />
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />      
+                        </div>
+                    </form>
+                </div>
+              
+            </div>
+        </div>
+
+    </div>
+   
+   
+</body>
+</html>
